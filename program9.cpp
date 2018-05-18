@@ -8,6 +8,16 @@ struct Node{
 int main(){
 	int n;
 	cin>>n;
+	struct Node *temp;
+	temp = (Node *)malloc(sizeof(struct Node));
+	temp->data = 8;
+	temp->Next = NULL;
+	cout<<temp->data<<endl;
+	cout<<temp->Next<<endl;
+	for(int i=0; temp !=NULL && i<5;i++){
+		temp = temp->Next;
+	}
+	cout<<temp<<endl;
 	int *vec = new int[n]();
 	vector<int> vectr(n);
 	for(int i=0;i<n;i++){
