@@ -3,23 +3,27 @@
 using namespace std;
 int fibo(int n,int *ar){
 	if(n == 0 || n == 1){
-		return n;
+		return ar[n];
 	}
-	if()
-	
-	
-	
-	
+        cout<<ar[n]<<endl;
+	if(ar[n]==-1){
+                ar[n] = fibo(n-1,ar) + fibo(n-2,ar);
+        }
+        return ar[n];
 }
 
 
 int main(){
 	int n,res;
-	int ar = new int[n];
+        cin>>n;
+	int *ar = new int[n];
 	for(int i=0;i<n;i++){
 		ar[i] = -1;
 	}
-	res = fibo(n,ar);
-	cout<<res;
+        //cout<<ar[0];
+        ar[0] = 0;
+        ar[1] = 1;
+	res = fibo(n,&ar);
+	cout<<res<<endl;
 	return 0;
 }
