@@ -5,7 +5,6 @@ int fibo(int n,int *ar){
 	if(n == 0 || n == 1){
 		return ar[n];
 	}
-        cout<<ar[n]<<endl;
 	if(ar[n]==-1){
                 ar[n] = fibo(n-1,ar) + fibo(n-2,ar);
         }
@@ -20,10 +19,9 @@ int main(){
 	for(int i=0;i<n;i++){
 		ar[i] = -1;
 	}
-        //cout<<ar[0];
         ar[0] = 0;
         ar[1] = 1;
-	res = fibo(n,&ar);
+	res = fibo(n-1,ar);
 	cout<<res<<endl;
 	return 0;
 }
