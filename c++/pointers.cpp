@@ -1,4 +1,4 @@
-//common undersatnding about pointers
+//common understanding about pointers
 #include<iostream>
 using namespace std;
 int main(){
